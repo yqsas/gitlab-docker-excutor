@@ -2,5 +2,5 @@
 for gitlab ci runner
 
 ```
-docker build -t yqsas/gitlab-docker-excutor:latest -t gitlab-docker-excutor:debian-10 .
+docker build -t yqsas/gitlab-docker-excutor:latest -t yqsas/gitlab-docker-excutor:debian-10 .
 ```
