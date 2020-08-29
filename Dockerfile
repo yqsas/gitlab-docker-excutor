@@ -14,9 +14,6 @@ RUN install_packages apt-utils unzip git gnupg2 lsb-release software-properties-
 RUN wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
 RUN add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ && apt-get update && \
     install_packages adoptopenjdk-8-hotspot maven
-# 使用内网指定maven 仓库
-RUN rm -rf /usr/share/maven/conf/settings.xml
-COPY settings.xml  /usr/share/maven/conf/settings.xml
 
 # 安装 Docker    https://docs.docker.com/install/linux/docker-ce/debian/
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
